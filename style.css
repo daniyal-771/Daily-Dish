@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family:'Cinzel';
+    src:url(fonts/Cinzel-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family:'Cormorant';
+    src:url(fonts/CormorantGaramond-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family:'Poppins';
+    src:url(fonts/Poppins-Medium.ttf);
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background: transparent;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+
+.logo {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mtoggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.nitems {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nitems a {
+    color: azure;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.nitems a:hover {
+    color: #e67e22;
+    transition: .3s ease;
+}
+
+nav.scrolled {
+    background-color: #ffffff; 
+}
+
+nav.scrolled a, nav.scrolled .logo, nav.scrolled .mtoggle {
+    color: #0E1B1D;
+}
+
+
+#pg1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0E1B1D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+    padding: 120px 80px 60px 80px;
+}
+
+.mheadings {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    flex: 1;    
+    z-index: 5;
+}
+
+.mheadings h1 {
+    font-size: clamp(3rem, 6vw, 7rem);
+    line-height: 1.1;
+}
+
+.mheadings h3 {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    margin-top: 25px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #cdd9db;      
+}
+
+.mimages {
+    position: relative;
+    flex: 1;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mimages img {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    opacity: 0.55;                 
+    filter: brightness(0.8);        
+    transition: all 0.3s ease;
+}
+
+.mimages img:hover {
+    opacity: 0.9;
+    filter: brightness(1);
+}
+
+.img-top {
+    top: -100px;
+    right: -60px;
+    transform: rotate(-10deg) rotateX(15deg);
+    z-index: 1;
+}
+
+.img-bottom {
+    bottom: -170px;
+    right: 20%;
+    transform: rotate(-10deg) rotateX(15deg);
+    z-index: 2;
+}
+#pg2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f0f3f3;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sheading {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0E1B1D;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.ccontainer {
+    width: 100%;
+    max-width: auto; 
+    overflow: hidden;
+    padding:20px;
+}
+
+.ctrack {
+    display: flex;
+    gap: 30px; 
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.fcard {
+    flex: 0 0 calc((100% - 60px) / 3);
+    background-color: rgb(231, 231, 228);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.food-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.finfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.food-name {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.food-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1; 
+}
+
+.food-price {
+    font-size: 1.4rem;
+    color: #e67e22; 
+    font-family: Poppins;
+
+}
+#pg3 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #0E1B1D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.6; 
+}
+
+.heading-r {
+    position: relative;
+    z-index: 10;
+    color: #ffffff; 
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family:sans-serif;
+}
+
+
+#breservation {
+    position: relative;
+    z-index: 10;
+    width: 240px;
+    height: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #0E1B1D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#breservation:hover {
+    background-color: rgb(22, 21, 21);
+    color: azure;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+#pg4 {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E1B1D;
+    padding: 60px 80px;
+    text-align: center;
+}
+.heading4 h1 {
+    color: azure;
+    font-family:cinzel;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.para4 {
+    color: white;
+    font-size: 18px;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+
+footer {
+    background: #0E1B1D;
+    color: white;
+    padding: 60px 80px 30px;
+    border-top: 1px solid #222;
+}
+.fcontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#fabout{
+    margin-top:10px;
+}
+
+#fcontact{
+    margin-top:10px;
+}
+
+.fcontainer div {
+    flex: 1;
+    min-width: 220px;
+}
+.flinks a, .fsocial a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.fsocial a {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+#fbicon:hover{
+    color:rgb(245, 245, 248);
+    background-color: blue;
+    border-radius: 20px;
+}
+#instaicon:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color:white;
+    border-radius:5px;
+}
+#xicon:hover{
+    background-color: black;
+    color:white;
+    border-radius:5px;
+}
+#yticon:hover{
+    color:rgb(230, 12, 12);
+}
+
+hr {
+    margin: 40px 0 20px;
+    border: none;
+    border-top: 1px solid #444;
+}
+
+.copyright {
+    text-align: center;
+    color: #aaa;
+}
+
+
+
+
+/* Laptops & Tablets*/
+@media (max-width: 1024px) {
+    #pg1 {
+        padding: 100px 40px 40px;
+    }
+
+    .fcard { 
+        flex: 0 0 calc((100% - 30px) / 2); 
+    }
+
+    .nitems {
+        right: 0;
+    }
+}
+
+/* Mobile Devices*/
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    #pg1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px 40px;
+    }
+
+    .mimages {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .mtoggle {
+        display: block;
+    }
+    .img-top {
+    top: -420px;
+    right: 0;
+    transform: rotate(-10deg) rotateX(15deg);
+    z-index: 1;
+    }
+    .mheadings{
+        margin-top: 80px;
+    }
+
+    .img-bottom {
+    top: -160px;  
+    left: -15px; 
+    transform: rotate(-12deg) rotateX(15deg);
+    z-index: 2;
+    }
+
+    .nitems {
+        display: none;
+    }
+
+    .nitems.active {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        background-color: #f1f6f7;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.2);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nitems.active a {
+        color: #0E1B1D;
+    }
+
+    .fcard { 
+        flex: 0 0 100%; 
+    }
+
+    footer, #pg4 {
+        padding: 40px 20px;
+    }
+}
