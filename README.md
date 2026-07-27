@@ -3,7 +3,7 @@
 A modern, highly interactive landing page for a premium restaurant featuring dark-mode luxury aesthetics, dynamic hover depth effects, and ambient video integrations.
 
 ## Preview
-![Daily Dish Hero Preview](preview.jpg)
+![Daily Dish Hero Preview](preview.png)
 
 ## Interactive Features
 - **Hero Parallax:** Dragging your cursor across the main section dynamically adjusts image opacity and perspective.
